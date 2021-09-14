@@ -8,7 +8,7 @@ public class MyController {
 
 	@GetMapping("/test-docker")
 	public String getData() {
-		return "Greetings folks. Wecome to Spring Boot!";
+		return "Greetings folks. Wecome to Spring Boot!!";
 	}
 
 }
