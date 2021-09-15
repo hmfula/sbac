@@ -47,7 +47,7 @@ docker build -t docker-demo .  # build a container image
 
 docker tag docker-demo  <add-your-docker-registry-username-here>/docker-demo
   
-docker push  <add-your-docker-registry-uername-here>/docker-demo  
+docker push  <add-your-docker-registry-username-here>/docker-demo  
 
 docker images -a|grep demo  # Optional: search for demo image. It should exist now (we just built it in the previous step)
 
