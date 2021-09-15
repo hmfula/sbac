@@ -45,7 +45,7 @@ docker images -a|grep demo  # search for demo image. It should not exist at this
 
 docker build -t docker-demo .  # build a container image
 
-docker tag docker-demo  <add-your-docker-registry-uername-here>/docker-demo
+docker tag docker-demo  <add-your-docker-registry-username-here>/docker-demo
   
 docker push  <add-your-docker-registry-uername-here>/docker-demo  
 
@@ -65,7 +65,7 @@ mvn clean # optional: maven clen
 
 # deploy the app in kubernetes
 
-kubectl create deployment sbaik --image=<add-your-docker-registry-uername-here>/docker-demo:latest  # start a single instance of spring boot application in kubernetes (sbaik) 
+kubectl create deployment sbaik --image=<add-your-docker-registry-username-here>/docker-demo:latest  # start a single instance of spring boot application in kubernetes (sbaik) 
 ```  
 
 
