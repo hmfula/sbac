@@ -19,8 +19,8 @@ Before continuing, ensure tha the following tools are installed:
 2. Run the spring boot application from a container image
 
 ## Part II
-4. Deploy the application in a Kubernetes cluster
-
+3. Deploy the application in a Kubernetes cluster
+```
 
 ### Create  a directory in your home directory
 cd ~
@@ -49,7 +49,7 @@ docker tag docker-demo  <add-your-docker-registry-uername-here>/docker-demo
   
 docker push  <add-your-docker-registry-uername-here>/docker-demo  
 
-docker images -a|grep demo  # Optiona: search for demo image. It should exist now (we just built it in the previous step)
+docker images -a|grep demo  # Optional: search for demo image. It should exist now (we just built it in the previous step)
 
 docker ps  -a|grep demo  # Optional: before running the conatiner check that there is no stopped container with name docker-demo
    
@@ -63,8 +63,10 @@ ctl+c   # close  the app
  
 mvn clean # optional: maven clen
 
-# deploy the app in kubernetes, 
+# deploy the app in kubernetes
+
 kubectl create deployment sbaik --image=<add-your-docker-registry-uername-here>/docker-demo:latest  # start a single instance of spring boot application in kubernetes (sbaik) 
+```  
 
 
 
